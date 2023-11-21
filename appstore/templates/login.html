@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class='container'>
+    <h1 class='text-center '>Well come to SignPage</h1>
+    <div class='w-50 mx-auto'>
+        <form class="w-full" action="" method='post'>
+            {% csrf_token %}
+                 {{form.as_p}}
+            <button class='btn btn-primary'>Login</button>
+        </form>
+
+    </div>
+
+</section>
+{% endblock content %}

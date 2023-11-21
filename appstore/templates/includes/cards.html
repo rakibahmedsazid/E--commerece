@@ -1,0 +1,10 @@
+<div class="col-3 ">
+    <div class="card" style="width: 18rem;">
+        <a href="{% url "details" p.id %}"><img src="{{p.image.url}}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <a class='nav-link active ' href="{% url "details" p.id %}"><h5 class="card-title"> {{p.name}} </h5></a>
+          <p class="card-text"> {{p.price}} </p>
+          <a href="#" class="btn btn-primary">add to cart</a>
+        </div>
+      </div>
+</div>

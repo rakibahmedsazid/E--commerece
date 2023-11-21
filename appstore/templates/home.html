@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section>
+    <h1>well come to home</h1>
+    {% comment %} Male Products {% endcomment %}
+    <div>
+        <a class='nav-link' href="{% url "mens" %}"><h2>Male Product</h2></a><hr>
+        <div class="d-flex row">
+          {% for p in productM %}
+            {% include "includes/cards.html" %}
+          {% endfor %}
+        </div>
+    </div>
+    {% comment %} Female Product {% endcomment %}
+    <div>
+     <a class='nav-link' href="{% url "females" %}"><h2>Female Product</h2></a><hr>
+      <div>
+        <div class="d-flex row">
+          {% for p in productF %}
+            {% include "includes/cards.html" %} 
+          {% endfor %}
+        </div>
+      </div>
+      {% comment %} Child Product {% endcomment %}
+      <div>
+        <a class='nav-link' href="{% url "chaild" %}"><h2>Chaild Product</h2></a><hr>
+        <div>
+          <div class="d-flex row">
+            {% for p in productC %}
+              {% include "includes/cards.html" %}
+            {% endfor %}
+          </div>
+        </div>
+      {% comment %} "Toy Product" {% endcomment %}
+      <div>
+        <a class='nav-link' href="{% url "toy" %}"><h2>toy Product</h2></a><hr>
+        <div>
+          <div class="d-flex row">
+            {% for p in productT %}
+              {% include "includes/cards.html" %}
+            {% endfor %}
+          </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

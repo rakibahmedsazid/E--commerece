@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <section>
+        <div>
+            <h1>Men's Popular product </h1>
+            <div class="d-flex row">    
+            {% for p in maleitem %}
+                {% include "includes/cards.html" %}
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock content %}
